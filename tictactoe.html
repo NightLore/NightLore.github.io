@@ -63,16 +63,16 @@
      *to detect MIME type application/x-java-jnlp-file on Gecko-based browsers. 
      */
     if (javawsInstalled || (navigator.userAgent.indexOf("Gecko") !=-1)) {
-        document.write("<a href=http://www.MySite.com/app.jnlp>Launch the application</a>");
+        document.write("<a href=http://NightLore.github.io/tictactoe.jnlp>Launch the application</a>");
     } else {
         document.write("Click ");
-        document.write("<a href=http://java.sun.com/PluginBrowserCheck?pass=http://www.MySite.com/download.html&fail=http://java.sun.com/javase/downloads/ea.jsp>here</a> ");
+        document.write("<a href=http://java.sun.com/PluginBrowserCheck?pass=http://NightLore.github.io/download.html&fail=http://java.sun.com/javase/downloads/ea.jsp>here</a> ");
         document.write("to download and install JRE 5.0 and the application.");
     }
     </SCRIPT>
 </head>
 <body>
 <div id="navigation"></div>
-<applet archive="TicTacToe.jar" code="MainFrame.java" width=500 height=500>Unable to load jar</applet>
+<applet archive="TicTacToe.jar" code="TicTacBoard.class" width=500 height=500>Unable to load jar</applet>
 </body>
 </html>

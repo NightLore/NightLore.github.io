@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- JNLP File for SwingSet2 Demo Application -->
 <jnlp
   spec="6.0+"
-  codebase="http://my_company.com/jaws/apps"
-  href="swingset2.jnlp">
+  codebase="https://NightLore.github.io/games/"
+  href="tictactoe.jnlp">
   <information>
     <title>Tic Tac Toe</title>
     <vendor>Night Lore</vendor>
     <homepage href="docs/help.html"/>
-    <description>SwingSet2 Demo Application</description>
-    <description kind="short">A demo of the capabilities 
-    of the Swing Graphical User Interface.</description>
+    <description>Tic Tac Toe Application</description>
+    <description kind="short">Tic Tac Toe.</description>
     <icon href="images/swingset2.jpg"/>
     <icon kind="splash" href="images/splash.gif"/>
     <offline-allowed/> 
@@ -22,14 +20,14 @@
   </information>
   <information os="linux">   
     <title> SwingSet2 Demo on Linux </title>
-    <homepage href="docs/linuxhelp.html">
+    <homepage href="docs/linuxhelp.html"/>
   </information>
   <security>
       <all-permissions/>
   </security>
   <resources>
     <j2se version="1.6+" java-vm-args="-esa -Xnoclassgc"/>
-    <jar href="lib/SwingSet2.jar"/>
+    <jar href="TicTacToe.jar"/>
   </resources>
-  <application-desc main-class="SwingSet2"/>
+  <application-desc main-class="MainFrame"/>
 </jnlp>
