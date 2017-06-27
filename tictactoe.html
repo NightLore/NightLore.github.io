@@ -65,11 +65,15 @@
      */
     function addGameLink(path) {
         if (javawsInstalled || (navigator.userAgent.indexOf("Gecko") !=-1)) {
-            document.write("<a href=" + path + ">Launch the application</a>");
+            // document.write("<a href=" + path + ">Launch the application</a>");
+            $("<a href=" + path + ">Launch the application</a>").appendTo("body");
         } else {
-            document.write("Click ");
-            document.write("<a href=http://java.sun.com/PluginBrowserCheck?pass=http://NightLore.github.io/download.html&fail=http://java.sun.com/javase/downloads/ea.jsp>here</a> ");
-            document.write("to download and install JRE 5.0 and the application.");
+            $("Click").appendTo("body");
+            $("<a href=http://java.sun.com/PluginBrowserCheck?pass=http://NightLore.github.io/download.html&fail=http://java.sun.com/javase/downloads/ea.jsp>here</a>").appendTo("body");
+            $("to download and install JRE 5.0 and the application.").appendTo("body");
+            // document.write("Click ");
+            // document.write("<a href=http://java.sun.com/PluginBrowserCheck?pass=http://NightLore.github.io/download.html&fail=http://java.sun.com/javase/downloads/ea.jsp>here</a>");
+            // document.write("to download and install JRE 5.0 and the application.");
         }
     }
     </SCRIPT>
