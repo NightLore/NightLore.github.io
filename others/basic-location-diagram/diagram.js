@@ -6,22 +6,10 @@ var selected = false;
 window.onload = function() {
     setupVariables('diagram_canvas');
     setupInput(document);
-//    setupInput(canvas);
 
     // ------------------- initialize right overlay ------------------- //
-    var d1 = document.createElement('div');
-    var s1 = createPointIntegerInput(origin,'span','x','x','20%',true,true);
-    var s2 = createPointIntegerInput(origin,'span','y','y','20%',true,true);
-
-    var s3 = document.createElement('span');
-    s3.appendChild(document.createTextNode('....'));
-    s3.style.visibility = "hidden";
-
-    d1.appendChild(s1);
-    d1.appendChild(s3);
-    d1.appendChild(s2);
-
-    document.getElementById('origin').appendChild(d1);
+    var origin_div = createCoordsDiv(origin);
+    document.getElementById('origin').appendChild(origin_div);
 }
 
 var setupVariables = function(c) {
@@ -146,10 +134,25 @@ function addPoint() {
     points.push(p);
 
     var title = document.createTextNode('Point ' + (point_num + 1) + ': ');
+    var coords_div = createCoordsDiv(p);
+    var radius_div = createPointIntegerInput(p,'div','Radius','radius','40%',true,true);
+    var color_div = createPointInput(p,'div','Set Color','fillColor','40%',true);
 
+    var point_div = document.createElement('div');
+    point_div.appendChild(title);
+    point_div.appendChild(coords_div);
+    point_div.appendChild(radius_div);
+    point_div.appendChild(color_div);
+    point_div.appendChild(document.createElement('br'));
+    document.getElementById('points').appendChild(point_div);
+
+    update();
+}
+
+function createCoordsDiv(point, width='20%') {
     var coords_div = document.createElement('div');
-    var x_span = createPointIntegerInput(p,'span','x','x','20%',true,true);
-    var y_span = createPointIntegerInput(p,'span','y','y','20%',true,true);
+    var x_span = createPointIntegerInput(point,'span','x','x',width,true,true);
+    var y_span = createPointIntegerInput(point,'span','y','y',width,true,true);
 
     var space = document.createElement('span');
     space.appendChild(document.createTextNode('....'));
@@ -158,19 +161,7 @@ function addPoint() {
     coords_div.appendChild(x_span);
     coords_div.appendChild(space);
     coords_div.appendChild(y_span);
-    
-    var radius_div = createPointIntegerInput(p,'div','Radius','radius','40%',true,true);
-    var color_div = createPointInput(p,'div','Set Color','fillColor','40%',true);
-
-    var pointDiv = document.createElement('div');
-    pointDiv.appendChild(title);
-    pointDiv.appendChild(coords_div);
-    pointDiv.appendChild(radius_div);
-    pointDiv.appendChild(color_div);
-    pointDiv.appendChild(document.createElement('br'));
-    document.getElementById('points').appendChild(pointDiv);
-
-    update();
+    return coords_div;
 }
 
 function createPointInput(p, container, text, value, width, keyup, blur) {
@@ -204,7 +195,7 @@ function createPointInput(p, container, text, value, width, keyup, blur) {
     return c;
 }
 
-function createPointIntegerInput(p,container, text, value, width, keyup, blur) {
+function createPointIntegerInput(p, container, text, value, width, keyup, blur) {
     var c = createPointInput(p, container, text, value, width);
     var i = c.getElementsByTagName('input')[0];
     if (keyup) {
