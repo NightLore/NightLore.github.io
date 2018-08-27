@@ -196,7 +196,7 @@ function createPointInput(p, container, text, value, width, keyup, blur) {
 }
 
 function createPointIntegerInput(p, container, text, value, width, keyup, blur) {
-    var c = createPointInput(p, container, text, value, width);
+    var c = createPointInput(p, container, text, value, width, false, false);
     var i = c.getElementsByTagName('input')[0];
     if (keyup) {
         if (typeof keyup != 'function') {
