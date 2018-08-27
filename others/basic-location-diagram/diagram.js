@@ -4,6 +4,15 @@ var ENTER = 13;
 var selected = false;
 // --------------------------------------------------------------- //
 window.onload = function() {
+    load();
+}
+
+// for embedding support with jquerry as this project did not need it on its own
+$(document).ready(function() {
+    load();
+});
+
+var load = function() {
     setupVariables('diagram_canvas');
     setupInput(document);
 
