@@ -7,21 +7,21 @@ window.onload = function() {
     load();
 }
 
-// for embedding support with jquerry as this project did not need it on its own
+// for embedding support with jquery as this project did not need it on its own
 $(document).ready(function() {
     load();
 });
 
 function load() {
-    setupVariables('diagram_canvas');
-    setupInput(document);
+    setupVariables();
+    setupInput();
 
     // ------------------- initialize right overlay ------------------- //
     var origin_div = createCoordsDiv(origin);
     document.getElementById('origin').appendChild(origin_div);
 }
 
-function setupVariables(c) {
+function setupVariables(c='diagram_canvas') {
     mouse = {
         x: 0,
         y: 0,
@@ -42,7 +42,7 @@ function setupVariables(c) {
     }
 }
 
-function setupInput(element) {
+function setupInput(element=document) {
 
     element.addEventListener('mousemove', function(e) {
 //        var pos = getMousePos(canvas,e);
