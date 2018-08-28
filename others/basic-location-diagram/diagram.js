@@ -12,7 +12,7 @@ $(document).ready(function() {
     load();
 });
 
-var load = function() {
+function load() {
     setupVariables('diagram_canvas');
     setupInput(document);
 
@@ -21,7 +21,7 @@ var load = function() {
     document.getElementById('origin').appendChild(origin_div);
 }
 
-var setupVariables = function(c) {
+function setupVariables(c) {
     mouse = {
         x: 0,
         y: 0,
@@ -42,7 +42,7 @@ var setupVariables = function(c) {
     }
 }
 
-var setupInput = function(element) {
+function setupInput(element) {
 
     element.addEventListener('mousemove', function(e) {
 //        var pos = getMousePos(canvas,e);
@@ -69,7 +69,7 @@ var setupInput = function(element) {
     window.addEventListener('resize', function() {resize_canvas(canvas);});
 }
 
-var resize_canvas = function() {
+function resize_canvas() {
 //    var div = document.getElementById('canvas_div');
 //    canvas.width = div.clientWidth;
 //    canvas.height = div.clientHeight;
@@ -82,7 +82,7 @@ var resize_canvas = function() {
     update();
 }
 
-var update = function() {
+function update() {
     var div = document.getElementById('canvas_div');
     canvas.width = div.clientWidth;
     canvas.height = div.clientHeight;
@@ -92,7 +92,7 @@ var update = function() {
     draw();
 }
 
-var draw = function() {
+function draw() {
     context2D.setTransform(1,0,0,1,0,0); // reset the transform matrix as it is cumulative
     context2D.clearRect(0, 0, canvas.width, canvas.height);//clear the viewport AFTER the matrix is reset
 
