@@ -10,7 +10,7 @@
 }
 
 body {
-   background-color: #E0BBE4;
+   background-color: #e6deff;
    padding-top: 4.1em;
 }
 
@@ -30,28 +30,6 @@ p {
 
 /*************** Header/Footer style **************/
 
-header, footer {
-   background-color: #333;
-   width: 100%;
-   color: #ddd;
-   overflow: hidden;
-}
-
-header {
-   top: 0;
-   position: fixed;
-}
-
-footer {
-   bottom: 0;
-}
-
-header h1 {
-   font-size: 1.5em;
-   padding: 0.2em 1em 0.1em 0.5em;
-   display: inline-block;
-}
-
 nav {
    display: inline-block;
 }
@@ -69,13 +47,35 @@ nav a:hover {
    text-decoration: underline;
 }
 
+header, footer {
+   background-color: #333;
+   width: 100%;
+   color: #ddd;
+}
+
+header {
+   top: 0;
+   position: fixed;
+}
+
+footer {
+   padding: 2em 0;
+   bottom: 0;
+}
+
+header h1 {
+   font-size: 1.5em;
+   padding: 0.2em 1em 0.1em 0.5em;
+   display: inline-block;
+}
+
 header a {
    font-size: 1.3em;
+   text-decoration: none;
 }
 
 header a, footer a {
    color: #ddd;
-   text-decoration: none;
    text-align: center;
 }
 
@@ -83,28 +83,40 @@ footer a {
    font-size: 1em;
 }
 
+footer nav {
+   display: block;
+}
+
+footer hr {
+   border-bottom: 1px solid #ddd;
+   margin: 2em 3em 2em 3em;
+}
+
+.footer-content {
+   margin: 0 2em 0 2em;
+}
+
 /************ Main **************/
 
 main {
    color: #333;
+   text-align: center;
 }
 
 /************ Article **************/
 
 article {
-   text-align: center;
+   max-width: 800px;
+   display: inline-block;
 }
 
 /************ Section ************/
 
 section {
-   background-color: #D3EAFF;
    text-align: left;
    border-radius: 0.5em;
    padding: 1.5em;
    margin: 0.5em;
-   display: inline-block;
-   max-width: 800px;
    vertical-align: top;
 }
 
@@ -123,7 +135,6 @@ section h2 {
 /************ Figures *************/
 
 figure {
-   background-color: #ddd;
    padding: 0.5em;
    margin: 1em;
    text-align: center;
@@ -147,6 +158,7 @@ figcaption {
 .fab {
    font-size: 3em!important;
    text-align: center;
+   text-decoration: none;
 }
 
 .fab:hover {
