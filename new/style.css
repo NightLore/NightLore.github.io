@@ -24,6 +24,10 @@ h2 {
    padding: 0.8em;
 }
 
+p {
+   margin: 0 0 0.5em 0;
+}
+
 /*************** Header/Footer style **************/
 
 header, footer {
@@ -99,11 +103,21 @@ section {
    border-radius: 0.5em;
    padding: 1.5em;
    margin: 0.5em;
+   display: inline-block;
+   max-width: 800px;
+   vertical-align: top;
 }
 
 section h2 {
    padding-left: 0;
    padding-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  section { 
+    display: block;
+    width: 100%;
+  }
 }
 
 /************ Figures *************/
@@ -112,6 +126,7 @@ figure {
    background-color: #ddd;
    padding: 0.5em;
    margin: 1em;
+   text-align: center;
 }
 
 figure img {
@@ -120,7 +135,11 @@ figure img {
 
 figcaption {
    font-style: italic;
-   text-align: center;
+   text-align: inherit;
+}
+
+.profile-figure img {
+   width: 50%;
 }
 
 
