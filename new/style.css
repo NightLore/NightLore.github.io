@@ -24,15 +24,22 @@ h2 {
    padding: 0.8em;
 }
 
-/*************** Navigation style **************/
+/*************** Header/Footer style **************/
+
+header, footer {
+   background-color: #333;
+   width: 100%;
+   color: #ddd;
+   overflow: hidden;
+}
 
 header {
-   background-color: #333;
-   position: absolute;
    top: 0;
-   width: 100%;
-   color: white;
-   overflow: hidden;
+   position: absolute;
+}
+
+footer {
+   bottom: 0;
 }
 
 header h1 {
@@ -54,15 +61,22 @@ nav li {
    display: inline-block;
 }
 
+nav a:hover {
+   text-decoration: underline;
+}
+
 header a {
-   color: #ddd;
-   text-decoration: none;
-   text-align: center;
    font-size: 1.3em;
 }
 
-nav li:hover {
-   background-color: #111;
+header a, footer a {
+   color: #ddd;
+   text-decoration: none;
+   text-align: center;
+}
+
+footer a {
+   font-size: 1em;
 }
 
 /************ Main **************/
