@@ -35,7 +35,7 @@ header, footer {
 
 header {
    top: 0;
-   position: absolute;
+   position: fixed;
 }
 
 footer {
@@ -97,12 +97,30 @@ section {
    background-color: #D3EAFF;
    text-align: left;
    border-radius: 0.5em;
+   padding: 1.5em;
+   margin: 0.5em;
 }
 
-section p {
-   padding: 1em;
+section h2 {
+   padding-left: 0;
+   padding-top: 0;
 }
 
-/************ Footer *************/
+/************ Figures *************/
+
+figure {
+   background-color: #ddd;
+   padding: 0.5em;
+   margin: 1em;
+}
+
+figure img {
+   width: 100%;
+}
+
+figcaption {
+   font-style: italic;
+   text-align: center;
+}
 
 
