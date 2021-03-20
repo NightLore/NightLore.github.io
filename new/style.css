@@ -142,4 +142,15 @@ figcaption {
    width: 50%;
 }
 
+/************ Icons *************/
+
+.fab {
+   font-size: 3em!important;
+   text-align: center;
+}
+
+.fab:hover {
+   opacity: 0.7;
+   text-decoration: none;
+}
 
