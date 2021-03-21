@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>404 error</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#navigation').load('./old/format/navigation.html');
-            // document.getElementById("navigation").innerHTML='<object width="100%" type="text/html" data="format/navigation.html" style="display: inline-block;"><a class="navbar-brand" href="#">NightLore.Github</a></object>';
-        });
-    </script>
+   <link rel="stylesheet" href="/style.css">
+
+   <!-- JQuerry to import header and footer -->
+   <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+   </script>
+   <script> 
+      $(function(){
+         $("header").load("/header.html"); 
+         $("footer").load("/footer.html"); 
+      });
+   </script>
+
+   <!-- Icon Library -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>404 error</title>
 </head>
 <body>
-<div id="navigation"></div>
-<div class="container">
-    <h1><strong>404 Error.</strong></h1>
-    <p>Page not found. Either this page is incomplete or does not exist.</p>
-</div>
+<header></header>
+
+<main>
+<article>
+   <h1>404 Error.</h1>
+   <p>Page not found. Either this page is incomplete or does not exist.</p>
+</article>
+</main>
+
+<footer></footer>
 </body>
 </html>
