@@ -25,7 +25,9 @@ h2 {
 }
 
 p {
+   font-size: 1.2em;
    margin: 0 0 0.5em 0;
+   line-height: 1.5em;
 }
 
 /*************** Header/Footer style **************/
@@ -106,7 +108,7 @@ main {
 /************ Article **************/
 
 article {
-   max-width: 800px;
+   max-width: 60em;
    display: inline-block;
 }
 
@@ -142,8 +144,29 @@ figcaption {
    text-align: inherit;
 }
 
-.profile-figure img {
+.col-container {
+   display: table;
+}
+
+.col {
+   display: table-cell;
+   vertical-align: top;
+   padding: 1.5em;
+}
+
+.profile-fig {
    width: 50%;
+}
+
+@media only screen and (max-width: 40em) {
+  .col {
+    display: block;
+  }
+  
+  .profile-fig {
+     width: 100%;
+     margin: auto;
+  }
 }
 
 /************ Icons *************/
