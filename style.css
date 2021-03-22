@@ -80,6 +80,7 @@ header {
 
 footer {
    padding: 2em 0;
+   margin: 4em 0 0 0;
    bottom: 0;
 }
 
@@ -196,4 +197,7 @@ figcaption {
    opacity: 0.7;
    text-decoration: none;
 }
+
+/************ Slideshow *************/
+
 
