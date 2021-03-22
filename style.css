@@ -35,6 +35,10 @@ a {
    font-size: 1.2em;
 }
 
+img {
+   width: 100%;
+}
+
 /*************** Header/Footer style **************/
 
 nav {
@@ -139,10 +143,6 @@ figure {
    padding: 0.5em;
    margin: 1em;
    text-align: center;
-}
-
-figure img {
-   width: 100%;
 }
 
 figcaption {
