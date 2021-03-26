@@ -22,33 +22,47 @@
    <h1>StrandedOutcast</h1>
 
    <section>
+
       <div class="slideshow-container">
          <div class="slide fade">
-            <div class="slide-numbertext">1 / 3</div>
+            <p class="slide-numbertext">1 / 3</p>
             <img src="/figures/stranded-outcast.png" style="width:100%">
-            <div class="slide-text">Caption Text</div>
+            <p class="slide-caption">Title Screen</p>
          </div>
 
          <div class="slide fade">
-            <div class="slide-numbertext">2 / 3</div>
-            <img src="/figures/snowfight-io.png" style="width:100%">
-            <div class="slide-text">Caption Two</div>
+            <p class="slide-numbertext">2 / 3</p>
+            <img src="/figures/stranded-outcast-crash.png" style="width:100%">
+            <p class="slide-caption">Crash land on an island</p>
          </div>
 
          <div class="slide fade">
-            <div class="slide-numbertext">3 / 3</div>
-            <img src="/figures/open-ended.png" style="width:100%">
-            <div class="slide-text">Caption Three</div>
+            <p class="slide-numbertext">3 / 3</p>
+            <img src="/figures/stranded-outcast-dock.png" style="width:100%">
+            <p class="slide-caption">Build a Boat!</p>
          </div>
 
-         <a class="slide-prev" onclick="plusSlides(-1)">&#10094;</a>
-         <a class="slide-next" onclick="plusSlides(1)">&#10095;</a>
+         <div class="slide fade">
+            <p class="slide-numbertext">3 / 3</p>
+            <img src="/figures/stranded-outcast-gameover.png" style="width:100%">
+            <p class="slide-caption">Avoid the creatures of the night</p>
+         </div>
+
+         <div class="slide fade">
+            <p class="slide-numbertext">3 / 3</p>
+            <img src="/figures/stranded-outcast-win.png" style="width:100%">
+            <p class="slide-caption">Escape the Island!</p>
+         </div>
       </div>
       
-      <div>
+      <div class="center-text">
+         <button class="slide-prev" onclick="plusSlides(-1)">&#10094;</button>
          <span class="slide-dot" onclick="currentSlide(1)"></span> 
          <span class="slide-dot" onclick="currentSlide(2)"></span> 
          <span class="slide-dot" onclick="currentSlide(3)"></span> 
+         <span class="slide-dot" onclick="currentSlide(4)"></span> 
+         <span class="slide-dot" onclick="currentSlide(5)"></span> 
+         <button class="slide-next" onclick="plusSlides(1)">&#10095;</button>
       </div>
    </section>
 
@@ -90,34 +104,7 @@
 </main>
 
 <footer></footer>
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slide");
-  var dots = document.getElementsByClassName("slide-dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" slide-active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " slide-active";
-}
-</script>
+<script src="/slideshow.js"></script>
 </body>
 </html>
 
