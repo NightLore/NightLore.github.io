@@ -30,7 +30,7 @@ p, a, li {
    margin-left: 0.5em;
 }
 
-p a {
+p a, li a {
    font-size: 100%;
    margin: 0;
 }

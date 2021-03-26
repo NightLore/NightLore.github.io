@@ -20,12 +20,79 @@
 <main>
 <article>
    <h1>Snowfight.io</h1>
-   <section>
+
+   <section class="slideshow-container">
+
+      <div class="slide fade">
+         <p class="slide-numbertext">1 / 3</p>
+         <img src="/figures/snowfight-io-titlescreen.png" style="width:100%">
+         <p class="slide-caption">Snowfight.io Title Screen</p>
+      </div>
+
+      <div class="slide fade">
+         <p class="slide-numbertext">2 / 3</p>
+         <img src="/figures/snowfight-io.png" style="width:100%">
+         <p class="slide-caption">Throw snowballs! Hide behind walls!</p>
+      </div>
+
+      <div class="slide fade">
+         <p class="slide-numbertext">3 / 3</p>
+         <img src="/figures/snowfight-io-gameover.png" style="width:100%">
+         <p class="slide-caption">Try not to get hit!</p>
+      </div>
+
+      <div class="center-text">
+         <button class="slide-prev" onclick="plusSlides(-1)">&#10094;</button>
+         <span class="slide-dot" onclick="currentSlide(1)"></span> 
+         <span class="slide-dot" onclick="currentSlide(2)"></span> 
+         <span class="slide-dot" onclick="currentSlide(3)"></span> 
+         <button class="slide-next" onclick="plusSlides(1)">&#10095;</button>
+      </div>
+
    </section>
+
+   <section>
+      <h2>Premise</h2>
+
+      <p>
+      Become the best at snowball fights! Gather snow from snow piles, build snow walls to duck behind, throw snow balls at others. Rise up to the top of the leaderboard. Just try not to get hit!
+      </p>
+      <p>
+      IO games are multiplayer server-based games that involve many players fighting for the top of the leaderboard. A popular example is <a href="https://agar.io/">Agar.io</a> which is credited for popularizing this genre of games.
+      </p>
+      <p>
+      Snowfight.io is an io game where players try to get the most hits off of other players by throwing snowballs. Play against friends and family to find out who is best.
+      </p>
+   </section>
+
+
+   <section>
+      <h2>Development</h2>
+      <ul>
+         <li>Made with Node.js, express.js, and JavaScript</li>
+         <li>Founded a company called eyeoh.io with four other friends</li>
+         <li>Made as a game for our <a href="https://eyeoh.io/">company website</a></li>
+         <li>Simple AI to fill empty server</li>
+      </ul>
+   </section>
+
+
+   <section>
+      <h2>Play Game</h2>
+
+      <p>
+      <a href="https://eyeoh.io/game">Play on eyeoh.io</a>
+      </p>
+      <p>
+      <a href="https://snowfight-io.herokuapp.com/">Play on heroku</a>
+      </p>
+   </section>
+
 </article>
 </main>
 
 <footer></footer>
+<script src="/slideshow.js"></script>
 </body>
 </html>
 
