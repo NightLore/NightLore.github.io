@@ -20,12 +20,58 @@
 <main>
 <article>
    <h1>Basic Location Diagram</h1>
-   <section>
+
+   <section class="slideshow-container">
+      <div class="slide fade">
+         <p class="slide-numbertext">1 / 2</p>
+         <img src="/figures/basic-location-diagram.png">
+         <p class="slide-caption">Keep track of locations!</p>
+      </div>
+
+      <div class="slide fade">
+         <p class="slide-numbertext">2 / 2</p>
+         <img src="/figures/basic-location-diagram.png">
+         <p class="slide-caption">Keep track of locations!</p>
+      </div>
+
+      <div class="center-text">
+         <button class="slide-prev" onclick="plusSlides(-1)">&#10094;</button>
+         <span class="slide-dot" onclick="currentSlide(1)"></span> 
+         <span class="slide-dot" onclick="currentSlide(2)"></span> 
+         <button class="slide-next" onclick="plusSlides(1)">&#10095;</button>
+      </div>
    </section>
+
+   <section>
+      <h2>Premise</h2>
+      <p>
+      When playing Dungeons and Dragons with my old high school friends, we were only able to play through a voice channel on Discord. Every player kept asking the game master for where they were in relation to the enemies and more importantly how far (as that determines whether or not the enemies can be attacked). Basic Location Diagram is meant to help mitigate this problem by helping the game master keep track of where everyone is. This could also be screen shared to help people see what is going on.
+      </p>
+   </section>
+
+   <section>
+      <h2>Development</h2>
+      <ul>
+         <li>Made with JavaScript on an HTML5 canvas</li>
+         <li>Originally made for playing Dungeons and Dragons</li>
+      </ul>
+   </section>
+
+   <section>
+      <h2>Play Game</h2>
+      <p>
+      <a href="/projects/downloads/basic-location-diagram/basic-location-diagram.html">Try out the program here</a>
+      </p>
+      <p>
+      <a href="https://github.com/NightLore/BasicLocationDiagram">View code on GitHub</a>
+      </p>
+   </section>
+
 </article>
 </main>
 
 <footer></footer>
+<script src="/slideshow.js"></script>
 </body>
 </html>
 

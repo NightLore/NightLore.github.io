@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="basic-location-diagram.css">
+    <title>Basic Location Diagram</title>
+    <script> // utility functions
+        
+        function isInt(value) {
+            if (isNaN(value)) return false;
+            var x = parseFloat(value);
+            return (x | 0) === x;
+        }
+        
+    </script>
+    <script type="text/javascript" src="circle.js"></script>
+    <script type="text/javascript" src="ui_base.js"></script>
+    <script type="text/javascript" src="button.js"></script>
+    <script type="text/javascript" src="sprite.js"></script>
+    <script type="text/javascript" src="diagram.js"></script>
+</head>
+<body>
+	<div id="container">
+        <div id="canvas_div">
+            <canvas id="diagram_canvas">
+                <p>Unfortunately your browser does not support HTML5 canvases</p>
+            </canvas>
+        </div>
+		<div id="overlay">
+            <div id="right_overlay" align="center">
+                <br>
+                Set Background: <input id="setBackground" type="text" name="setBackground" placeholder="Valid Html Color" value="dimgray" onkeydown="setBackground(this, document.getElementById('overlay'));" onblur="resetBackgroundField(this);">
+                <br><br>
+                Set Origin: 
+                <div id="origin"></div>
+                <br>
+                <div id="points"></div>
+                <button type="button" onclick="addPoint();">Add Point</button>
+            </div>
+            <div id="title">
+                <h1>Basic Location Diagram</h1>
+            </div>
+            <div id="mouse_coordinates"></div>
+        </div>
+	</div>
+</body>
+</html>

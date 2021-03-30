@@ -1,0 +1,55 @@
+
+body {
+    margin: 0;
+}
+
+#container {
+    position: absolute; 
+    width: 100%; 
+    height: 100%;
+}
+
+#title {
+    padding-left: 5%;
+    color: white;
+}
+
+#diagram_canvas {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    background-color: dimgray; 
+    z-index: -1;
+}
+
+#overlay {
+    position: absolute; 
+    width: 100%; 
+    height: 100%;
+}
+
+#setBackground {
+    width: 10em;
+}
+
+#right_overlay {
+    float: right; 
+    background-color: lightgray; 
+    width: 20%; 
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+#canvas_div {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+}
+
+#mouse_coordinates {
+    color: white;
+    position: fixed;
+    bottom: 3px;
+    padding-left: 1%;
+}
