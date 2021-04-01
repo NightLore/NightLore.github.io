@@ -20,12 +20,79 @@
 <main>
 <article>
    <h1>DependencyVis</h1>
-   <section>
+
+   <section class="slideshow-container">
+      <div class="slide fade">
+         <p class="slide-numbertext">1 / 5</p>
+         <img src="/figures/dependency-vis-titlescreen.png">
+         <p class="slide-caption">DependencyVis Title Screen</p>
+      </div>
+
+      <div class="slide fade">
+         <p class="slide-numbertext">2 / 5</p>
+         <img src="/figures/dependency-vis-full-graph.png">
+         <p class="slide-caption">Load up entire dependency graphs and metrics of each dependency</p>
+      </div>
+
+      <div class="slide fade">
+         <p class="slide-numbertext">3 / 5</p>
+         <img src="/figures/dependency-vis-audit.png">
+         <p class="slide-caption">Check for known vulnerabilities</p>
+      </div>
+
+      <div class="slide fade">
+         <p class="slide-numbertext">4 / 5</p>
+         <img src="/figures/dependency-vis.png">
+         <p class="slide-caption">Check for incompatible licenses</p>
+      </div>
+
+      <div class="slide fade">
+         <p class="slide-numbertext">5 / 5</p>
+         <img src="/figures/dependency-vis-adding.png">
+         <p class="slide-caption">Simulate npm install to try out and compare more libraries</p>
+      </div>
+
+      <div class="center-text">
+         <button class="slide-prev" onclick="plusSlides(-1)">&#10094;</button>
+         <span class="slide-dot" onclick="currentSlide(1)"></span> 
+         <span class="slide-dot" onclick="currentSlide(2)"></span> 
+         <span class="slide-dot" onclick="currentSlide(3)"></span> 
+         <span class="slide-dot" onclick="currentSlide(4)"></span> 
+         <span class="slide-dot" onclick="currentSlide(5)"></span> 
+         <button class="slide-next" onclick="plusSlides(1)">&#10095;</button>
+      </div>
    </section>
+
+   <section>
+      <h2>Premise</h2>
+      <p>
+      This project encompasses the idea of my thesis: to help software developers visualize their dependency graphs and details about each and every dependency to quickly determine how good a dependency is. This addresses the problem of developers not taking the time to investigate and research the libraries they depend on, resulting in potential security and legal problems in the future.
+      </p>
+   </section>
+
+   <section>
+      <h2>Development</h2>
+      <ul>
+         <li>Made with JavaScript and Node.js</li>
+         <li>Thesis currently under review.</li>
+      </ul>
+   </section>
+
+   <section>
+      <h2>Try Out</h2>
+      <p>
+      <a href="http://dependencyvis.herokuapp.com/">Try out project here</a>
+      </p>
+      <p>
+      <a href="https://github.com/NightLore/DependencyVis">View code on GitHub</a>
+      </p>
+   </section>
+
 </article>
 </main>
 
 <footer></footer>
+<script src="/slideshow.js"></script>
 </body>
 </html>
 
