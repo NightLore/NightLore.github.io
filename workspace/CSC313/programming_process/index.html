@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+   <style>
+      .map {
+      height: 400px;
+      width: 100%;
+      }
+   </style>
+   <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+   <title>Map</title>
+</head>
+<body>
+   <h2>My Map</h2>
+   <div id="map" class="map"></div>
+   <script type="text/javascript">
+
+      var slo = new ol.Feature({
+         geometry: new ol.geom.Point(ol.proj.fromLonLat([-120.661469, 35.285845])),
+      });
+
+      slo.setStyle(
+         new ol.style.Style({
+            image: new ol.style.Icon({
+               color: '#e32ddd',
+               crossOrigin: 'anonymous',
+               src: 'dot.svg',
+               scale: 1.5,
+            }),
+         })
+      );
+
+      var bakersfield = new ol.Feature({
+         geometry: new ol.geom.Point(ol.proj.fromLonLat([-119.037895, 35.364136])),
+      });
+
+      bakersfield.setStyle(
+         new ol.style.Style({
+            image: new ol.style.Icon({
+               color: '#6a00ff',
+               crossOrigin: 'anonymous',
+               src: 'dot.svg',
+               scale: 0.5,
+            }),
+         })
+      );
+
+      var vectorLayer = new ol.layer.Vector({
+         source: new ol.source.Vector({
+            features: [slo, bakersfield],
+         }),
+      });
+
+      var map = new ol.Map({
+         target: 'map',
+         layers: [
+            new ol.layer.Tile({
+               source: new ol.source.OSM()
+            }),
+            vectorLayer,
+         ],
+         view: new ol.View({
+            center: ol.proj.fromLonLat([-119.816895, 35.326330]),
+            zoom: 8
+         })
+      });
+   </script>
+</body>
+</html>
