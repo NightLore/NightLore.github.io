@@ -53,6 +53,11 @@ img {
    text-align: center;
 }
 
+.mobile-img {
+   display: inline-block!important;
+   width: 50%;
+}
+
 /*************** Header/Footer style **************/
 
 nav {
@@ -259,6 +264,9 @@ figcaption {
 }
 
 /************ Slideshow *************/
+.slide {
+   text-align: center;
+}
 
 /* Next & previous buttons */
 .slide-prev, .slide-next {
