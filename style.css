@@ -58,6 +58,10 @@ img {
    width: 50%;
 }
 
+a i {
+   padding-right: 0.5em;
+}
+
 /*************** Header/Footer style **************/
 
 nav {
