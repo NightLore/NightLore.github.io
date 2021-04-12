@@ -59,7 +59,12 @@ img {
 }
 
 a i {
+   padding-left: 0.5em;
    padding-right: 0.5em;
+}
+
+a:hover {
+   color: #3A0DBD;
 }
 
 /*************** Header/Footer style **************/
@@ -113,6 +118,10 @@ header a {
 header a, footer a {
    color: #ddd;
    text-align: center;
+}
+
+header a:hover, footer a:hover {
+   color: #bbb;
 }
 
 footer nav {
